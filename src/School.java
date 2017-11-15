@@ -13,7 +13,6 @@ public class School {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // YEAH YEAH
-        // Pushing this to Maloof's Branch
+        // YEAH YEsdadasdAH
     }
 }
