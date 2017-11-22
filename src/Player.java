@@ -7,13 +7,13 @@
  *
  * @author ranam3235
  */
-public class School {
-
+public class Player {
+    
     /**
-     * @param args the command line arguments
+     * constructor for the player
      */
-    public static void main(String[] args) {
-        // YEAH YEAH
-        // Maloof's Branch
+    public Player(){
+        
     }
+    
 }
