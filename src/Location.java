@@ -52,6 +52,7 @@ public class Location {
 
 
 
+        
 //         // make another array for space, double the size of the previous
 //            int[] temp = new int[array.length * 2];
 //            // copy values from original array into new array
