@@ -41,31 +41,40 @@ public class Location {
         // use a scanner with the file
         Scanner in = new Scanner(file);
         // get the first locationName (simply for testing reasons)
-        String initialLocationName = in.next();
+        String initialLocationName = in.nextLine();
         // move to the next line
         in.nextLine();
-        String initialDirection = in.next();
-        
-        
+        String initialDirection = in.nextLine();
+
+        int[] array = new int[122];
 
 
 
 
 
-        
-//         // make another array for space, double the size of the previous
-//            int[] temp = new int[array.length * 2];
-//            // copy values from original array into new array
-//            for (int i = 0; i < array.length; i++) {
-//                // fill the temporary array with all the values of the previous array
-//                temp[i] = array[i];
-//            }
-//            // set the tremporary array to be the new array
-//            array = temp;
-//            // insert the number at the end of the list
-//            array[numItems] = num;
-//            // increase the number of items
-//            numItems++;
-//        
+        // make another array for space, double the size of the previous
+        int[] temp = new int[array.length * 2];
+        // copy values from original array into new array
+        for (int i = 0; i < array.length; i++) {
+            // fill the temporary array with all the values of the previous array
+            temp[i] = array[i];
+        }
+        // set the tremporary array to be the new array
+        array = temp;
+        // insert the number at the end of the list
+        //array[numItems] = num;
+        // increase the number of items
+        // numItems++;
+
+        for (int i = 0; i < array.length; i++) {
+            String locationName = in.nextLine();
+            String direction = in.next();
+            String fileName = in.next();
+            String canMoveForward = in.next();
+
+
+
+        }
+
     }
 }
