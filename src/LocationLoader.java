@@ -12,10 +12,14 @@ import java.util.Scanner;
  *
  * @author ranam3235
  */
-public class Locations {
+public class LocationLoader {
 
     private BufferedImage image;
     private BufferedImage[] images;
+    private String[] locationName;
+    private String[] direction;
+    private String[] imageName;
+    private boolean[] canMoveForward;
 
     /**
      * @param args the command line arguments
@@ -25,7 +29,7 @@ public class Locations {
         FileReader file = null;
         try {
 
-            URL url = Locations.class.getResource("pics.txt");
+            URL url = LocationLoader.class.getResource("pics.txt");
 
             System.out.println(url);
             // creating the file reader
@@ -67,15 +71,8 @@ public class Locations {
         // numItems++;
 
         for (int i = 0; i < array.length; i++) {
-            String locationName = in.nextLine();
-            String direction = in.next();
-            String fileName = in.next();
-            String canMoveForward = in.next();
-
-
-
         }
 
-    
+
     }
 }
