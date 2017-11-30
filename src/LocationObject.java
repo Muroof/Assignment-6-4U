@@ -10,10 +10,13 @@ import java.awt.image.BufferedImage;
  * @author manok5757
  */
 public class LocationObject {
-
-    private BufferedImage images;
+    // create an instance variable to store the image of a particular location
+    private BufferedImage image;
+    // create an instance variable to store the general location name of a specific location
     private String locationName;
+    // create an instance variable to store the direction of a specific location
     private String direction;
+    // create an instance variable top 
     private String imageName;
     private boolean canMoveForward;
 
@@ -26,32 +29,27 @@ public class LocationObject {
         this.direction = direction;
     }
 
-    public void setImage(String imageName, BufferedImage image) {
+    public void setImage(String imageName) {
         this.imageName = imageName;
         // load in the image
-        this.images = image;
+
 
     }
 
-    public String getName() {
-        return name;
-    }
+    public BufferedImage loadImage(String imageName) {
+        BufferedImage currentImage = loadImage(this.imageName);
+        this.image = currentImage;
+        return this.image;
 
-    public String getPhone() {
-        return phoneNumber;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    @Override
-    public String toString() {
-        String format = this.name + "\n";
-
-        format += "Phone: " + this.phoneNumber + "\n";
-        format += "Email: " + this.email + "\n";
-        return format;
-    }
+//
+//    @Override
+//    public String toString() {
+//        String format = this.name + "\n";
+//
+//        format += "Phone: " + this.phoneNumber + "\n";
+//        format += "Email: " + this.email + "\n";
+//        return format;
+//    }
 }
-}
+
