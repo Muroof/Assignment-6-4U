@@ -11,6 +11,7 @@ import java.awt.image.BufferedImage;
  */
 public class LocationObject {
     // create an instance variable to store the image of a particular location
+
     private BufferedImage image;
     // create an instance variable to store the general location name of a specific location
     private String locationName;
@@ -18,7 +19,8 @@ public class LocationObject {
     private String direction;
     // create an instance variable top 
     private String imageName;
-    private boolean canMoveForward;
+    // create an instance variable that stores true/false if 
+    private boolean isFrontBlocked;
 
     // consrtructor using the name
     public LocationObject(String locationName) {
@@ -31,11 +33,27 @@ public class LocationObject {
 
     public void setImage(String imageName) {
         this.imageName = imageName;
-        // load in the image
 
 
     }
 
+    public void setIsFrontBlocked(boolean isFrontBlocked) {
+        this.isFrontBlocked = isFrontBlocked;
+    }
+
+    public boolean getIsFrontBlocked() {
+        return this.isFrontBlocked;
+    }
+
+    public String getDirection() {
+        return this.direction;
+    }
+
+    public String getLocationName() {
+        return this.locationName;
+    }
+
+    // constructor for images (loads images)
     public BufferedImage loadImage(String imageName) {
         BufferedImage currentImage = loadImage(this.imageName);
         this.image = currentImage;
@@ -52,4 +70,3 @@ public class LocationObject {
 //        return format;
 //    }
 }
-
