@@ -59,6 +59,7 @@ public class LocationObject {
         this.image = currentImage;
         return this.image;
 
+        
     }
 //
 //    @Override
