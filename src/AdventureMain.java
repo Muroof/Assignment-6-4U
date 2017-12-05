@@ -30,7 +30,7 @@ public class AdventureMain {
         FileReader file = null;
         try {
 
-            URL url = LocationLoader.class.getResource("pics.txt");
+            URL url = AdventureMain.class.getResource("pics.txt");
 
             System.out.println(url);
             // creating the file reader
@@ -74,7 +74,7 @@ public class AdventureMain {
             }
             location.setDirection(direction);
             location.setImage(imageName);
-            location.loadImage(imageName);
+//            location.loadImage(imageName);
 
             locations[i] = location;
             i++;
