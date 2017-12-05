@@ -25,38 +25,30 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        moveNorth = new javax.swing.JButton();
-        moveWest = new javax.swing.JButton();
-        moveEast = new javax.swing.JButton();
-        moveSouth = new javax.swing.JButton();
+        turnLeft = new javax.swing.JButton();
+        turnRight = new javax.swing.JButton();
+        moveForward = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        moveNorth.setText("North");
-        moveNorth.addActionListener(new java.awt.event.ActionListener() {
+        turnLeft.setText("Turn Left");
+        turnLeft.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                moveNorthActionPerformed(evt);
+                turnLeftActionPerformed(evt);
             }
         });
 
-        moveWest.setText("West");
-        moveWest.addActionListener(new java.awt.event.ActionListener() {
+        turnRight.setText("Turn Right");
+        turnRight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                moveWestActionPerformed(evt);
+                turnRightActionPerformed(evt);
             }
         });
 
-        moveEast.setText("East");
-        moveEast.addActionListener(new java.awt.event.ActionListener() {
+        moveForward.setText("Move");
+        moveForward.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                moveEastActionPerformed(evt);
-            }
-        });
-
-        moveSouth.setText("South");
-        moveSouth.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                moveSouthActionPerformed(evt);
+                moveForwardActionPerformed(evt);
             }
         });
 
@@ -65,47 +57,39 @@ public class Interface extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(moveWest)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(moveEast))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(279, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(moveNorth)
-                    .addComponent(moveSouth))
-                .addGap(245, 245, 245))
+                .addGap(92, 92, 92)
+                .addComponent(turnLeft)
+                .addGap(72, 72, 72)
+                .addComponent(moveForward)
+                .addGap(86, 86, 86)
+                .addComponent(turnRight)
+                .addContainerGap(116, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(moveNorth)
-                .addGap(142, 142, 142)
+                .addContainerGap(274, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(moveWest)
-                    .addComponent(moveEast))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
-                .addComponent(moveSouth))
+                    .addComponent(turnLeft)
+                    .addComponent(moveForward)
+                    .addComponent(turnRight))
+                .addGap(58, 58, 58))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void moveWestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveWestActionPerformed
+    private void turnLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnLeftActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_moveWestActionPerformed
+    }//GEN-LAST:event_turnLeftActionPerformed
 
-    private void moveEastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveEastActionPerformed
+    private void turnRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnRightActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_moveEastActionPerformed
+    }//GEN-LAST:event_turnRightActionPerformed
 
-    private void moveNorthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveNorthActionPerformed
+    private void moveForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveForwardActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_moveNorthActionPerformed
-
-    private void moveSouthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveSouthActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_moveSouthActionPerformed
+    }//GEN-LAST:event_moveForwardActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,9 +126,8 @@ public class Interface extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton moveEast;
-    private javax.swing.JButton moveNorth;
-    private javax.swing.JButton moveSouth;
-    private javax.swing.JButton moveWest;
+    private javax.swing.JButton moveForward;
+    private javax.swing.JButton turnLeft;
+    private javax.swing.JButton turnRight;
     // End of variables declaration//GEN-END:variables
 }

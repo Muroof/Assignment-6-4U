@@ -78,9 +78,7 @@ public class LocationLoader {
             locations[i] = location;
             i++;
         }
-        for (int j = 0; j < locations.length; j++) {
-            System.out.println(locations[j]);
-        }
+
 
 //        // make another array for space, double the size of the previous
 //        int[] temp = new int[array.length * 2];
