@@ -51,38 +51,36 @@ public class LocationLoader {
         in.nextLine();
         String initialDirection = in.nextLine();
 
-        locations = new LocationObject[122];
+        // create an array of locations which can initialy store 96 locations
+        locations = new LocationObject[96];
+        int i = 0;
         while (in.hasNext()) {
             String name = in.nextLine();
             String direction = in.next();
             String imageName = in.next();
             String isFrontBlocked = in.next();
-            
+
+            // create a location object capable of storing multiple 
+            LocationObject location = new LocationObject(name);
             if (isFrontBlocked.equals("true")) {
                 boolean frontBlocked = true;
-            }
-            else if (isFrontBlocked.equals("false")) {
+                location.setIsFrontBlocked(frontBlocked);
+            } else if (isFrontBlocked.equals("false")) {
                 boolean frontBlocked = false;
+                location.setIsFrontBlocked(frontBlocked);
                 String nextLocation = in.next();
                 String nextLocationDirection = in.next();
-                 
+
             }
-            // create the contact
-            LocationObject l = new LocationObject(name);
-            l.setDirection(direction);
-            l.setImage(imageName);
-            l.setIsFrontBlocked(frontBlocked);
-//            // add contact to list
-//            locations[i] = l;
-//            i++;
+            location.setDirection(direction);
+            location.setImage(imageName);
+
+            locations[i] = location;
+            i++;
         }
-
-
-
-
-
-
-
+        for (int j = 0; j < locations.length; j++) {
+            System.out.println(locations[j]);
+        }
 
 //        // make another array for space, double the size of the previous
 //        int[] temp = new int[array.length * 2];
@@ -100,7 +98,5 @@ public class LocationLoader {
 //
 //        for (int i = 0; i < array.length; i++) {
 //        }
-
-
     }
 }

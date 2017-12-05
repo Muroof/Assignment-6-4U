@@ -25,21 +25,87 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        moveNorth = new javax.swing.JButton();
+        moveWest = new javax.swing.JButton();
+        moveEast = new javax.swing.JButton();
+        moveSouth = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        moveNorth.setText("North");
+        moveNorth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moveNorthActionPerformed(evt);
+            }
+        });
+
+        moveWest.setText("West");
+        moveWest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moveWestActionPerformed(evt);
+            }
+        });
+
+        moveEast.setText("East");
+        moveEast.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moveEastActionPerformed(evt);
+            }
+        });
+
+        moveSouth.setText("South");
+        moveSouth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moveSouthActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(moveWest)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(moveEast))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(279, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(moveNorth)
+                    .addComponent(moveSouth))
+                .addGap(245, 245, 245))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(moveNorth)
+                .addGap(142, 142, 142)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(moveWest)
+                    .addComponent(moveEast))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addComponent(moveSouth))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void moveWestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveWestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moveWestActionPerformed
+
+    private void moveEastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveEastActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moveEastActionPerformed
+
+    private void moveNorthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveNorthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moveNorthActionPerformed
+
+    private void moveSouthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveSouthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moveSouthActionPerformed
 
     /**
      * @param args the command line arguments
@@ -76,5 +142,9 @@ public class Interface extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton moveEast;
+    private javax.swing.JButton moveNorth;
+    private javax.swing.JButton moveSouth;
+    private javax.swing.JButton moveWest;
     // End of variables declaration//GEN-END:variables
 }
