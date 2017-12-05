@@ -1,5 +1,9 @@
 
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+import javax.swing.JComponent;
 
 /*
  * To change this template, choose Tools | Templates
@@ -22,7 +26,27 @@ public class LocationObject {
     // create an instance variable that stores true/false if 
     private boolean isFrontBlocked;
 
+    public class JImage extends JComponent {
+        BufferedImage img = null;
+
+        /**
+         * Draws an image to the entire component
+         *
+         * @param g graphics object to draw
+         */
+        public void paintComponent(Graphics g) {
+            if (img != null) {
+                g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), null);
+            }
+        }
+
+        public void setImage(BufferedImage img) {
+            this.img = img;
+            this.repaint();
+        }
+    }
     // consrtructor using the name
+
     public LocationObject(String locationName) {
         this.locationName = locationName;
     }
@@ -54,20 +78,26 @@ public class LocationObject {
     }
 
     // constructor for images (loads images)
-    public BufferedImage loadImage(String imageName) {
-        BufferedImage currentImage = loadImage(this.imageName);
-        this.image = currentImage;
-        return this.image;
+    public BufferedImage getImage() {
+        BufferedImage img = null;
+        try{
+            img = ImageIO.read(new File("images//" + imageName));
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
-        
+        BufferedImage currentImage = img;
+        this.image = currentImage;
+        return image;
+
     }
-//
-//    @Override
-//    public String toString() {
-//        String format = this.name + "\n";
-//
-//        format += "Phone: " + this.phoneNumber + "\n";
-//        format += "Email: " + this.email + "\n";
-//        return format;
-//    }
+
+    public String toString() {
+        String format = this.locationName + "\n";
+
+        format += "Direction: " + this.direction + "\n";
+        format += "Image Name: " + this.imageName + "\n";
+        format += "Is Front Blocked: " + this.isFrontBlocked + "\n";
+        return format;
+    }
 }

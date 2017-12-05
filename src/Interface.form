@@ -24,67 +24,53 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="moveWest" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="moveEast" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="279" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="moveNorth" min="-2" max="-2" attributes="0"/>
-                  <Component id="moveSouth" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="245" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+              <Component id="turnLeft" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+              <Component id="moveForward" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+              <Component id="turnRight" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="116" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="moveNorth" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+              <EmptySpace pref="274" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="moveWest" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="moveEast" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="turnLeft" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="moveForward" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="turnRight" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="133" max="32767" attributes="0"/>
-              <Component id="moveSouth" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="moveNorth">
+    <Component class="javax.swing.JButton" name="turnLeft">
       <Properties>
-        <Property name="text" type="java.lang.String" value="North"/>
+        <Property name="text" type="java.lang.String" value="Turn Left"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moveNorthActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="turnLeftActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="moveWest">
+    <Component class="javax.swing.JButton" name="turnRight">
       <Properties>
-        <Property name="text" type="java.lang.String" value="West"/>
+        <Property name="text" type="java.lang.String" value="Turn Right"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moveWestActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="turnRightActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="moveEast">
+    <Component class="javax.swing.JButton" name="moveForward">
       <Properties>
-        <Property name="text" type="java.lang.String" value="East"/>
+        <Property name="text" type="java.lang.String" value="Move"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moveEastActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="moveSouth">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="South"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moveSouthActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="moveForwardActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
