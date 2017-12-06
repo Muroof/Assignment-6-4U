@@ -57,23 +57,23 @@ public class Interface extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(92, 92, 92)
+                .addGap(83, 83, 83)
                 .addComponent(turnLeft)
-                .addGap(72, 72, 72)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addComponent(moveForward)
-                .addGap(86, 86, 86)
+                .addGap(99, 99, 99)
                 .addComponent(turnRight)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addGap(79, 79, 79))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(274, Short.MAX_VALUE)
+                .addContainerGap(308, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(turnLeft)
                     .addComponent(moveForward)
                     .addComponent(turnRight))
-                .addGap(58, 58, 58))
+                .addGap(24, 24, 24))
         );
 
         pack();
