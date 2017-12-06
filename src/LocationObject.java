@@ -100,6 +100,7 @@ public class LocationObject {
     public BufferedImage getImage() {
         BufferedImage img = null;
         try{
+            
             img = ImageIO.read(new File("images//" + imageName));
         }catch(Exception e){
             e.printStackTrace();
