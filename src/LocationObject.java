@@ -23,6 +23,10 @@ public class LocationObject {
     private String direction;
     // create an instance variable top 
     private String imageName;
+    // create an instance variable to store the next direction if the user can move straight
+    private String locationGoIfMoveStraight;
+    // create an instance variable to store the direction of the location that will be reached if the user moves forward
+    private String DirectionoflocationIfMoveStraight;
     // create an instance variable that stores true/false if 
     private boolean isFrontBlocked;
 
@@ -64,7 +68,14 @@ public class LocationObject {
     public void setIsFrontBlocked(boolean isFrontBlocked) {
         this.isFrontBlocked = isFrontBlocked;
     }
+    
+    public void setLocationifMoveStraight(String locationGoIfMoveStraight){
+        this.locationGoIfMoveStraight = locationGoIfMoveStraight;
+    }
 
+    public void setDirectionLocationifMoveStrsight(String directionLocationInFront){
+        this.DirectionoflocationIfMoveStraight = directionLocationInFront;
+    }
     public boolean getIsFrontBlocked() {
         return this.isFrontBlocked;
     }
@@ -75,6 +86,14 @@ public class LocationObject {
 
     public String getLocationName() {
         return this.locationName;
+    }
+    
+    public String getLocationifMoveStraight(){
+        return this.locationGoIfMoveStraight;
+    }
+    
+    public String getDirectionofLocationinFront(){
+        return this.DirectionoflocationIfMoveStraight;
     }
 
     // constructor for images (loads images)
@@ -98,6 +117,8 @@ public class LocationObject {
         format += "Direction: " + this.direction + "\n";
         format += "Image Name: " + this.imageName + "\n";
         format += "Is Front Blocked: " + this.isFrontBlocked + "\n";
+        format += "Next Location: " + this.locationGoIfMoveStraight + "\n";
+        format += "Direction of Next Location: " + this.DirectionoflocationIfMoveStraight + "\n";
         return format;
     }
 }
