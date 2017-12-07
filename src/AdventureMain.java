@@ -24,28 +24,19 @@ public class AdventureMain {
     // create a private graphics interface
     private Interface gui;
     private Map layout;
+    private int row, col;
 
     // initializing GUI interface
-    public AdventureMain(){
+    public AdventureMain(int startRow, int startCol) {
         gui = new Interface(this);
-        //layout = new Map()
+        layout = new Map(12, 24, "images/");
+        row = startRow;
+        col = startCol;
+        gui.setImage(layout.getLocation(row, col));
+        gui.setVisible(true);
+
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     /**
      * @param args the command line arguments
      */

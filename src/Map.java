@@ -6,19 +6,29 @@ import java.awt.image.BufferedImage;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Kiran
  */
 public class Map {
-    
+
     // create a private two dimensional buffered image array to store the layout of the schoo;
-    private BufferedImage [][] layout;
-    
-    public Map(int rows, int columns, String folder){
+    private BufferedImage[][] layout;
+
+    public Map(int rows, int columns, String folder) {
         // creating an array to store the layout in a sort of grid
-        layout = new BufferedImage [rows][columns];
+        layout = new BufferedImage[rows][columns];
         // go through each row
+    }
+
+    public BufferedImage getLocation(int row, int col) {
+        // check for valid spot
+        if (row < layout.length && col < layout[0].length) {
+            // return a picture
+            return layout[row][col];
+        } else {
+            // return null if invalid
+            return null;
+        }
     }
 }
