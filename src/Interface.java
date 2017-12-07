@@ -9,6 +9,7 @@
  */
 public class Interface extends javax.swing.JFrame {
 
+    private AdventureMain game;
     /**
      * Creates new form Interface
      */
@@ -16,6 +17,13 @@ public class Interface extends javax.swing.JFrame {
         initComponents();
     }
 
+    /**
+     * Creates new form Interface and links it to our game
+     */
+    public Interface(AdventureMain game) {
+        initComponents();
+        this.game = game;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -81,6 +89,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void turnLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnLeftActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_turnLeftActionPerformed
 
     private void turnRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnRightActionPerformed

@@ -23,7 +23,29 @@ public class AdventureMain {
     private String initialDirection;
     // create a private graphics interface
     private Interface gui;
+    private Map layout;
 
+    // initializing GUI interface
+    public AdventureMain(){
+        gui = new Interface(this);
+        //layout = new Map()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
