@@ -2,6 +2,7 @@
 import java.io.FileReader;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -85,18 +86,21 @@ public class AdventureMain {
 
         // use a scanner with the file
         Scanner in = new Scanner(file);
-        // create an array of locations which can initialy store 96 locations
-        locations = new ArrayList<>();
-        // initially read in the first location (special case) amd move to the next line
-        String initialImageName = in.nextLine();
-        // initially read in the direction of the first location and move to the next line
-        String initialDirection = in.nextLine();
+//        // create an array of locations which can initialy store 96 locations
+//        locations = new ArrayList<>();
+//        // initially read in the first location (special case) amd move to the next line
+//        String initialImageName = in.nextLine();
+//        // initially read in the direction of the first location and move to the next line
+//        String initialDirection = in.nextLine();
+//        
+//        String initial
+//        // create a location object to store the intial location
+//        LocationObject initialLocation = new LocationObject(initialLocationName);
+//        // set the direction of the initial location
+//        initialLocation.setDirection(initialDirection);
         
-        String initial
-        // create a location object to store the intial location
-        LocationObject initialLocation = new LocationObject(initialLocationName);
-        // set the direction of the initial location
-        initialLocation.setDirection(initialDirection);
+        String location = in.nextLine();
+        String direction = in.nextLine();
 
 
 
@@ -105,7 +109,9 @@ public class AdventureMain {
         while (in.hasNext()) {
 
             // read in the location name of the next 4 locations and move to the next line
-            String generalLocationName = in.nextLine();
+            String locationName = in.nextLine();
+            Location location = new Location(locationName);
+            
             // create a for loop to go through the next 4 locations, so a general location name can be applied to all of them
             for (int j = 0; j < 4; j++) {
                 
