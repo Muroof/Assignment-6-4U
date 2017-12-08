@@ -17,30 +17,55 @@ public class AdventureMain {
 
     // create a private array of locations
     private ArrayList<LocationObject> locations;
-    // create a private string of the initial location so it can be referenced later in the main method
-    private String initialLocationName;
-    // create a private string of the initial direction so it can be referenced later in the main method
-    private String initialDirection;
+//    // create a private string of the initial location so it can be referenced later in the main method
+//    private String initialLocationName;
+//    // create a private string of the initial direction so it can be referenced later in the main method
+//    private String initialDirection;
     // create a private graphics interface
     private Interface gui;
-    private Map layout;
-    private int row, col;
+    private int initialLocationPositionWithinArray;
+    
 
     // initializing GUI interface
-    public AdventureMain(int startRow, int startCol) {
+    public AdventureMain() {
         gui = new Interface(this);
-        layout = new Map(12, 24, "images/");
-        row = startRow;
-        col = startCol;
-        gui.setImage(layout.getLocation(row, col));
-        gui.setVisible(true);
+        
+        
+//        col = startCol;
+        gui.setImage(locations.get(this.initialLocationPositionWithinArray).getImage());
+            gui.setVisible(true);
 
     }
+    
+    
+    
+    
+    // set the intial location of the user
+    public void initialSetPosition(){
+        // load in the initial image
+        gui.setImage(locations.get(this.initialLocationPositionWithinArray).getImage());
+        
+    }
+    
+    
+    /**
+     *
+     */
+    public void moveRight(){
+        //if(locations.)
+    }
+    
+    
+    
+    
+    
 
     /**
      * @param args the command line arguments
      */
     public void getLocationInfo() {
+        
+        
         // create a blank file reader
         FileReader file = null;
         try {
@@ -60,9 +85,9 @@ public class AdventureMain {
         // create an array of locations which can initialy store 96 locations
         locations = new ArrayList<>();
         // initially read in the first location (special case) amd move to the next line
-        initialLocationName = in.nextLine();
+        String initialLocationName = in.nextLine();
         // initially read in the direction of the first location and move to the next line
-        initialDirection = in.nextLine();
+        String initialDirection = in.nextLine();
         // create a location object to store the intial location
         LocationObject initialLocation = new LocationObject(initialLocationName);
         // set the direction of the initial location
@@ -125,18 +150,30 @@ public class AdventureMain {
                 }
                 // store the location just created in an array of locations
                 locations.add(location);
-
+                
             }
 
 
 
 
         }
-
-        for (int j = 0; j < locations.size(); j++) {
-            System.out.println(locations.get(j));
-
+        
+        for (int i = 0; i < locations.size(); i++) {
+            System.out.println(locations.get(i));
         }
+        
+        int whereStartingLocationIs =0;
+        // find the spot in the array where the initial location is
+        while((!locations.get(whereStartingLocationIs).getLocationName().equals(initialLocationName) )|| !locations.get(whereStartingLocationIs).getDirection().equals(initialDirection)){
+            // increase the comparison position
+            whereStartingLocationIs++;
+        }
+        
+        // store the integer where the initial location is at
+        this.initialLocationPositionWithinArray = whereStartingLocationIs;
+        //System.out.println(whereStartingLocationIs);
+        System.out.println(initialLocationPositionWithinArray);
+       
     }
 
     /**

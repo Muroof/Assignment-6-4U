@@ -1,8 +1,10 @@
+
+import java.awt.image.BufferedImage;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author ranam3235
@@ -10,6 +12,8 @@
 public class Interface extends javax.swing.JFrame {
 
     private AdventureMain game;
+    private LocationObject image;
+
     /**
      * Creates new form Interface
      */
@@ -24,6 +28,7 @@ public class Interface extends javax.swing.JFrame {
         initComponents();
         this.game = game;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -89,16 +94,21 @@ public class Interface extends javax.swing.JFrame {
 
     private void turnLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnLeftActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_turnLeftActionPerformed
 
     private void turnRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnRightActionPerformed
         // TODO add your handling code here:
+        game.initialSetPosition();
     }//GEN-LAST:event_turnRightActionPerformed
 
     private void moveForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveForwardActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_moveForwardActionPerformed
+
+    public void setImage(BufferedImage img) {
+        this.image.getImage();
+    }
 
     /**
      * @param args the command line arguments
@@ -139,4 +149,5 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton turnLeft;
     private javax.swing.JButton turnRight;
     // End of variables declaration//GEN-END:variables
+
 }
