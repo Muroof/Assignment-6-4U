@@ -12,10 +12,10 @@ import javax.swing.JComponent;
 /**
  *
  * @author manok5757
+ * @author Maloof
  */
 public class LocationObject {
     // create an instance variable to store the image of a particular location
-
     private BufferedImage image;
     // create an instance variable to store the general location name of a specific location
     private String locationName;

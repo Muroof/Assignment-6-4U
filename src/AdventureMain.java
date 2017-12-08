@@ -12,6 +12,7 @@ import java.util.Scanner;
 /**
  *
  * @author Kiran
+ * @author Maloof
  */
 public class AdventureMain {
 
