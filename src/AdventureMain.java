@@ -17,7 +17,9 @@ import java.util.Scanner;
 public class AdventureMain {
 
     // create a private array of locations
-    private ArrayList<LocationObject> locations;
+    private ArrayList<Location> locations;
+    
+    private ArrayList<ImageObject> images;
 //    // create a private string of the initial location so it can be referenced later in the main method
 //    private String initialLocationName;
 //    // create a private string of the initial direction so it can be referenced later in the main method
@@ -86,9 +88,11 @@ public class AdventureMain {
         // create an array of locations which can initialy store 96 locations
         locations = new ArrayList<>();
         // initially read in the first location (special case) amd move to the next line
-        String initialLocationName = in.nextLine();
+        String initialImageName = in.nextLine();
         // initially read in the direction of the first location and move to the next line
         String initialDirection = in.nextLine();
+        
+        String initial
         // create a location object to store the intial location
         LocationObject initialLocation = new LocationObject(initialLocationName);
         // set the direction of the initial location
@@ -104,8 +108,16 @@ public class AdventureMain {
             String generalLocationName = in.nextLine();
             // create a for loop to go through the next 4 locations, so a general location name can be applied to all of them
             for (int j = 0; j < 4; j++) {
+                
+                
+                
+                
+                
+                
                 // create a location object 
-                LocationObject location = new LocationObject(generalLocationName);
+                ImageObject image = new ImageObject(generalLocationName);
+                
+                
 
                 // store the direction
                 String direction = in.next();
@@ -150,7 +162,7 @@ public class AdventureMain {
 
                 }
                 // store the location just created in an array of locations
-                locations.add(location);
+                location.add(location);
                 
             }
 

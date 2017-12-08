@@ -35,24 +35,24 @@ public class Location {
         this.SImg = SImg;
     }
 
-    public void setSImg(ImageObject SImg) {
-        this.SImg = SImg;
+    public void setWImg(ImageObject WImg) {
+        this.WImg = WImg;
     }
 
     public ImageObject getEImg() {
         return EImg;
     }
 
-    public ImageObject getEImg() {
-        return EImg;
+    public ImageObject getNImg() {
+        return NImg;
     }
 
-    public ImageObject getEImg() {
-        return EImg;
+    public ImageObject getSImg() {
+        return SImg;
     }
 
-    public ImageObject getEImg() {
-        return EImg;
+    public ImageObject getWImg() {
+        return WImg;
     }
 
 }

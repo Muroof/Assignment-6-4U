@@ -1,6 +1,8 @@
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 
 /*
@@ -15,6 +17,7 @@ import javax.swing.JComponent;
  * @author Maloof
  */
 public class ImageLoader extends JComponent{
+    private BufferedImage image;
     
     BufferedImage img = null;
     
@@ -32,6 +35,22 @@ public class ImageLoader extends JComponent{
     public void setImage(BufferedImage img){
         this.img = img;
         this.repaint();
+    }
+    
+    // constructor for images (loads images)
+    public BufferedImage getImage(String imageName) {
+        BufferedImage img = null;
+        try {
+
+            img = ImageIO.read(new File("images//" + imageName));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        BufferedImage currentImage = img;
+        this.image = currentImage;
+        return image;
+
     }
 }
 
