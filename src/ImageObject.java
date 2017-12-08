@@ -17,7 +17,7 @@ public class ImageObject {
     // create an instance variable that stores true/false if 
     private boolean isFrontBlocked;
     // if the player can move to a new location
-    private ImageObject newImage;
+    private ImageObject nextImage;
     // location of the image (as the image is a n, e, s, w of an image)
     private Location location;
 
@@ -26,12 +26,24 @@ public class ImageObject {
         this.direction = direction;
         this.location = location;
         this.isFrontBlocked = isFrontBlocked;
-        this.newImage = newImage;
+        this.nextImage = nextImage;
 
     }
 
-    public void setNewImage(ImageObject image) {
-        this.newImage = image;
+    public void setNextImage(ImageObject image) {
+        this.nextImage = image;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public void setIsFrontBlocked(boolean isFrontBlocked) {
+        this.isFrontBlocked = isFrontBlocked;
     }
 
     public String getImageName() {
@@ -46,12 +58,11 @@ public class ImageObject {
         return location;
     }
 
-    public ImageObject getNewImage() {
-        return newImage;
+    public ImageObject getNextImage() {
+        return nextImage;
     }
 
     public boolean isFrontBlocked() {
         return isFrontBlocked;
     }
-
 }
