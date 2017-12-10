@@ -21,12 +21,21 @@ public class AdventureMain {
 
     // create a private array of locations
     private ArrayList<Location> locations;
+<<<<<<< HEAD
 
     private ArrayList<ImageObject> images;
     // create a private string of the initial location so it can be referenced later in the main method
     private String initialLocation;
     // create a private string of the initial direction so it can be referenced later in the main method
     private String initialDirection;
+=======
+    
+    private ArrayList<ImageObject> images;
+//    // create a private string of the initial location so it can be referenced later in the main method
+//    private String initialLocationName;
+//    // create a private string of the initial direction so it can be referenced later in the main method
+//    private String initialDirection;
+>>>>>>> master
     // create a private graphics interface
     private Interface gui;
     private int initialLocationPositionWithinArray;
@@ -76,6 +85,7 @@ ImageLoader load = new ImageLoader();
 
         // use a scanner with the file
         Scanner in = new Scanner(file);
+<<<<<<< HEAD
         // create an array of locations
         locations = new ArrayList<>();
         // create an array of imageObjects (individual places within the location)
@@ -93,6 +103,48 @@ ImageLoader load = new ImageLoader();
             // create a for loop to go through the next 4 imageObjects, so a general location name can be applied to all of them
             for (int j = 0; j < 4; j++) {
                 // scan in the direction of the imageObject\
+=======
+//        // create an array of locations which can initialy store 96 locations
+//        locations = new ArrayList<>();
+//        // initially read in the first location (special case) amd move to the next line
+//        String initialImageName = in.nextLine();
+//        // initially read in the direction of the first location and move to the next line
+//        String initialDirection = in.nextLine();
+//        
+//        String initial
+//        // create a location object to store the intial location
+//        LocationObject initialLocation = new LocationObject(initialLocationName);
+//        // set the direction of the initial location
+//        initialLocation.setDirection(initialDirection);
+        
+        String location = in.nextLine();
+        String direction = in.nextLine();
+
+
+
+
+        // while there are items to read in the text file
+        while (in.hasNext()) {
+
+            // read in the location name of the next 4 locations and move to the next line
+            String locationName = in.nextLine();
+            Location location = new Location(locationName);
+            
+            // create a for loop to go through the next 4 locations, so a general location name can be applied to all of them
+            for (int j = 0; j < 4; j++) {
+                
+                
+                
+                
+                
+                
+                // create a location object 
+                ImageObject image = new ImageObject(generalLocationName);
+                
+                
+
+                // store the direction
+>>>>>>> master
                 String direction = in.next();
                 // create an image object with the scanned in variables
                 ImageObject image = new ImageObject(location, direction);
@@ -134,6 +186,7 @@ ImageLoader load = new ImageLoader();
                     // move to the next line
                     in.nextLine();
                 }
+<<<<<<< HEAD
                 // store the imageObject created in the array of imageObjects
                 images.add(image);
                 // if it is the north image
@@ -155,6 +208,11 @@ ImageLoader load = new ImageLoader();
                 }
                 // add the location to the array of locations
                 locations.add(location);
+=======
+                // store the location just created in an array of locations
+                location.add(location);
+                
+>>>>>>> master
             }
         }
 

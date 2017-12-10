@@ -16,6 +16,13 @@ public class Location {
 
     public Location(String locationName) {
         this.locationName = locationName;
+<<<<<<< HEAD
+=======
+        this.NImg = NImg;
+        this.EImg = EImg;
+        this.SImg = SImg;
+        this.WImg = WImg;
+>>>>>>> master
 
     }
 
@@ -51,6 +58,10 @@ public class Location {
         return WImg;
     }
 
+<<<<<<< HEAD
     
 }
 
+=======
+}
+>>>>>>> master
