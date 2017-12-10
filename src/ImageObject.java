@@ -14,36 +14,37 @@ public class ImageObject {
     private String direction;
     // create an instance variable top 
     private String imageName;
-    // create an instance variable that stores true/false if 
+    // create an instance variable that stores true/false if the front is blocked
     private boolean isFrontBlocked;
-    // if the player can move to a new location
-    private ImageObject nextImage;
-    // location of the image (as the image is a n, e, s, w of an image)
+    // the next location to move to if possible
+    private String nextLocation;
+    // the next directionwithin the location to move to
+    private String nextDirection;
+    // location of the image (as the image is a n, e, s, w of a location)
     private Location location;
 
-    public ImageObject(String imageName, String direction, Location location, boolean isFrontBlocked) {
+    // constructor
+    public ImageObject(Location location, String direction) {
+
+        this.direction = direction;
+        this.location = location;
+
+    }
+
+    public void setImageName(String imageName) {
         this.imageName = imageName;
-        this.direction = direction;
-        this.location = location;
-        this.isFrontBlocked = isFrontBlocked;
-        this.nextImage = nextImage;
-
-    }
-
-    public void setNextImage(ImageObject image) {
-        this.nextImage = image;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public void setIsFrontBlocked(boolean isFrontBlocked) {
         this.isFrontBlocked = isFrontBlocked;
+    }
+
+    public void setNextLocation(String location) {
+        this.nextLocation = location;
+    }
+
+    public void setNextDirection(String nextDirection) {
+        this.nextDirection = nextDirection;
     }
 
     public String getImageName() {
@@ -58,11 +59,27 @@ public class ImageObject {
         return location;
     }
 
-    public ImageObject getNextImage() {
-        return nextImage;
+    public String getNextLocation() {
+        return nextLocation;
+    }
+
+    public String getNextDirection() {
+        return nextDirection;
     }
 
     public boolean isFrontBlocked() {
         return isFrontBlocked;
     }
+    
+    public String toString() {
+        String format = this.location + "\n";
+
+        format += "Direction: " + this.direction + "\n";
+        format += "Image Name: " + this.imageName + "\n";
+        format += "Is Front Blocked: " + this.isFrontBlocked + "\n";
+        format += "Next Location: " + this.nextLocation + "\n";
+        format += "Direction of Next Location: " + this.nextDirection + "\n";
+        return format;
+    }
 }
+

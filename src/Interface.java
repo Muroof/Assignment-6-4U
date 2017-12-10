@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
 public class Interface extends javax.swing.JFrame {
 
     private AdventureMain game;
-    private LocationObject image;
+    private ImageObject image;
 
     /**
      * Creates new form Interface
@@ -99,7 +99,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void turnRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnRightActionPerformed
         // TODO add your handling code here:
-        game.initialSetPosition();
+        
     }//GEN-LAST:event_turnRightActionPerformed
 
     private void moveForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveForwardActionPerformed
@@ -107,7 +107,8 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_moveForwardActionPerformed
 
     public void setImage(BufferedImage img) {
-        this.image.getImage();
+        // need to add a get image method to ImageObject, or something else (adding method to imageObject is probably easiest)
+        //this.image.getImage();
     }
 
     /**

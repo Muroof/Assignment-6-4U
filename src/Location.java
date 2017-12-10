@@ -14,12 +14,8 @@ public class Location {
 
     private String locationName;
 
-    public Location(String locationName, ImageObject NImg, ImageObject EImg, ImageObject SImg, ImageObject WImg) {
+    public Location(String locationName) {
         this.locationName = locationName;
-        this.NImg = NImg;
-        this.EImg = EImg;
-        this.SImg = SImg;
-        this.WImg = WImg;
 
     }
 
@@ -55,4 +51,6 @@ public class Location {
         return WImg;
     }
 
+    
 }
+
