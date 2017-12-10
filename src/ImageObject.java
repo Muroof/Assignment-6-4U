@@ -14,7 +14,6 @@ public class ImageObject {
     private String direction;
     // create an instance variable top 
     private String imageName;
-<<<<<<< HEAD
     // create an instance variable that stores true/false if the front is blocked
     private boolean isFrontBlocked;
     // the next location to move to if possible
@@ -46,38 +45,6 @@ public class ImageObject {
 
     public void setNextDirection(String nextDirection) {
         this.nextDirection = nextDirection;
-=======
-    // create an instance variable that stores true/false if 
-    private boolean isFrontBlocked;
-    // if the player can move to a new location
-    private ImageObject nextImage;
-    // location of the image (as the image is a n, e, s, w of an image)
-    private Location location;
-
-    public ImageObject(String imageName, String direction, Location location, boolean isFrontBlocked) {
-        this.imageName = imageName;
-        this.direction = direction;
-        this.location = location;
-        this.isFrontBlocked = isFrontBlocked;
-        this.nextImage = nextImage;
-
-    }
-
-    public void setNextImage(ImageObject image) {
-        this.nextImage = image;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    public void setIsFrontBlocked(boolean isFrontBlocked) {
-        this.isFrontBlocked = isFrontBlocked;
->>>>>>> master
     }
 
     public String getImageName() {
@@ -92,23 +59,17 @@ public class ImageObject {
         return location;
     }
 
-<<<<<<< HEAD
     public String getNextLocation() {
         return nextLocation;
     }
 
     public String getNextDirection() {
         return nextDirection;
-=======
-    public ImageObject getNextImage() {
-        return nextImage;
->>>>>>> master
     }
 
     public boolean isFrontBlocked() {
         return isFrontBlocked;
     }
-<<<<<<< HEAD
     
     public String toString() {
         String format = this.location + "\n";
@@ -122,6 +83,3 @@ public class ImageObject {
     }
 }
 
-=======
-}
->>>>>>> master
