@@ -1,5 +1,4 @@
 
-
 import java.awt.image.BufferedImage;
 import java.io.FileReader;
 import java.net.URL;
@@ -34,25 +33,15 @@ public class AdventureMain {
     // initializing GUI interface
     public AdventureMain() {
         gui = new Interface(this);
-ImageLoader load = new ImageLoader();
-    //BufferedImage image =load.getImage(images.get(1).getImageName());
-    //gui.setImage(image);
+        ImageLoader load = new ImageLoader();
+        //BufferedImage image =load.getImage(images.get(1).getImageName());
+        //gui.setImage(image);
         gui.setVisible(true);
 
     }
 
-    // set the intial location of the user
-    public void initialSetPosition() {
-        // load in the initial image
-        //gui.setImage(locations.get(this.initialLocationPositionWithinArray).getImage());
+    public void moveForward() {
 
-    }
-
-    /**
-     *
-     */
-    public void moveRight() {
-        //if(locations.)
     }
 
     /**
@@ -182,4 +171,3 @@ ImageLoader load = new ImageLoader();
 
     }
 }
-
