@@ -29,19 +29,99 @@ public class AdventureMain {
     // create a private graphics interface
     private Interface gui;
     private int initialLocationPositionWithinArray;
+    private ImageObject currentImage;
 
     // initializing GUI interface
     public AdventureMain() {
         gui = new Interface(this);
         ImageLoader load = new ImageLoader();
-        //BufferedImage image =load.getImage(images.get(1).getImageName());
-        //gui.setImage(image);
-        gui.setVisible(true);
+        //BufferedImage image =load.loadImage(images.get(1).getImageName());
+//        gui.setImage(image);
+//        gui.setVisible(true);
+        // set the current image to be the starting image
+        //this.currentImage = images.get(initialLocationPositionWithinArray);
+        // NEED TO SET INITIAL IMAGE HERE
+        //gui.setImage(images.get(initialLocationPositionWithinArray).getImageName());
 
     }
 
     public void moveForward() {
+        // if the front is not blocked
+        if (!this.currentImage.isFrontBlocked()) {
+            int i = 0;
+            // search the array for the next image to go to
+            while ((!images.get(i).getLocation().getLocationName().equals(this.currentImage.getNextLocation())) || ((!images.get(i).getNextDirection().equals(this.currentImage.getNextDirection())))) {
+                // increase the comparison position
+                i++;
+            }
+            // move to that imageObject
+            this.currentImage = images.get(i);
+            // UPDATE THE GUI WORK ON THIS!!!!!!!!!!!!
+            
+        }
+    }
 
+    public void moveRight() {
+        int i = 0;
+        // search for the location within the array
+        while (!locations.get(i).getLocationName().equals(this.currentImage.getLocation().getLocationName())) {
+            // increase the comparison position
+            i++;
+        }
+        // if they are facing north
+        if (this.currentImage.getDirection().equals("N")) {
+            // set them to be in the east direction of the same location
+            this.currentImage = locations.get(i).getEImg();
+            // UPDATE THE GUI
+
+        } else if (this.currentImage.getDirection().equals("E")) {
+            // set them to be in the south direction of the same location
+            this.currentImage = locations.get(i).getSImg();
+            //UPDATE THE GUI
+
+        } else if (this.currentImage.getDirection().equals("S")) {
+            // set them to be in the west direction of the same location
+            this.currentImage = locations.get(i).getWImg();
+            //UPDATE THE GUI
+
+        } else if (this.currentImage.getDirection().equals("W")) {
+            // set them to be in the nortj direction of the same location
+            this.currentImage = locations.get(i).getNImg();
+            //UPDATE THE GUI
+
+        }
+
+    }
+
+    public void moveLeft() {
+        int i = 0;
+        // search for the location within the array
+        while (!locations.get(i).getLocationName().equals(this.currentImage.getLocation().getLocationName())) {
+            // increase the comparison position
+            i++;
+        }
+        // if they are facing north
+        if (this.currentImage.getDirection().equals("N")) {
+            // set them to be in the west direction of the same location
+            this.currentImage = locations.get(i).getWImg();
+            // UPDATE THE GUI
+
+        } else if (this.currentImage.getDirection().equals("E")) {
+            // set them to be in the north direction of the same location
+            this.currentImage = locations.get(i).getNImg();
+            //UPDATE THE GUI
+
+        } else if (this.currentImage.getDirection().equals("S")) {
+            // set them to be in the east direction of the same location
+            this.currentImage = locations.get(i).getEImg();
+            //UPDATE THE GUI
+
+        } else if (this.currentImage.getDirection().equals("W")) {
+            // set them to be in the south direction of the same location
+            this.currentImage = locations.get(i).getSImg();
+            //UPDATE THE GUI
+
+        }
     }
 
     /**
@@ -147,17 +227,17 @@ public class AdventureMain {
             }
         }
 
-//        int whereStartingLocationIs =0;
-//        // find the spot in the array where the initial location is
-//        while((!locations.get(whereStartingLocationIs).getLocationName().equals(initialLocationName) )|| !locations.get(whereStartingLocationIs).getDirection().equals(initialDirection)){
-//            // increase the comparison position
-//            whereStartingLocationIs++;
-//        }
-//        
-//        // store the integer where the initial location is at
-//        this.initialLocationPositionWithinArray = whereStartingLocationIs;
-//        //System.out.println(whereStartingLocationIs);
-//        System.out.println(initialLocationPositionWithinArray);
+        int whereStartingLocationIs = 0;
+        // find the spot in the array where the initial location is
+        while ((!images.get(whereStartingLocationIs).getDirection().equals(initialDirection)) || (!images.get(whereStartingLocationIs).getLocation().getLocationName().equals(initialLocation))) {
+            // increase the comparison position
+            whereStartingLocationIs++;
+        }
+
+        // store the integer where the initial location is at
+        this.initialLocationPositionWithinArray = whereStartingLocationIs;
+
+        // UPDATE THE GUI WITH STARTING IMAGE HERE NOT IN THE CONSTRUCTOR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     /**
