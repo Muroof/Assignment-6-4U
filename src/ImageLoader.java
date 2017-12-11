@@ -19,33 +19,35 @@ import javax.swing.JComponent;
  */
 public class ImageLoader extends JComponent {
 
-    public static BufferedImage loadImage(String imageName) {
-        BufferedImage image = null;
-        try {
-            image = ImageIO.read(new File("images//" + imageName));
-        } catch (Exception e) {
-            e.printStackTrace();
+    // instance variable
+    private BufferedImage image;
 
-        }
-        return image;
+    // constructor
+    public ImageLoader() {
+        image = null;
     }
 
-    BufferedImage image = null;
-
     /**
-     * Draws an image to the entire component
      *
-     * @param g graphics object to draw
+     * @param g paint component to set the width and height of the image to the
+     * screen layout
      */
     @Override
     public void paintComponent(Graphics g) {
         if (image != null) {
-            g.drawImage(image, 0, 0, this.getWidth(), this.getHeight(), null);
+            g.drawImage(image, 0, 0, image.getWidth(), image.getHeight(), null);
         }
     }
 
-    public void setImage(BufferedImage image) {
-        this.image = image;
-        this.repaint();
+    /**
+     *
+     * @param img set the image that is received
+     */
+    public void setImage(BufferedImage img) {
+        System.out.println(this.getWidth());
+        // store the image
+        this.image = img;
+        // repaint to draw
+        repaint();
     }
 }
