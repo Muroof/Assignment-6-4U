@@ -12,13 +12,17 @@ import java.awt.image.BufferedImage;
 public class Interface extends javax.swing.JFrame {
 
     private AdventureMain game;
-    private ImageLoader image;
-    
+//    private ImageLoader image;
+
     /**
      * Creates new form Interface
      */
     public Interface() {
         initComponents();
+    }
+    
+    public void setImage(BufferedImage img) {
+        IMAGE.setImage(img);
     }
 
     /**
@@ -26,7 +30,7 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface(AdventureMain game) {
         initComponents();
-        jPanel1.setVisible(false);
+        IMAGE.setVisible(false);
         this.game = game;
     }
 
@@ -42,9 +46,7 @@ public class Interface extends javax.swing.JFrame {
         turnLeft = new javax.swing.JButton();
         turnRight = new javax.swing.JButton();
         moveForward = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        IMAGE = new org.netbeans.modules.form.InvalidComponent();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,39 +71,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Kiran\\Documents\\NetBeansProjects\\final-project-kiranmanoj2000\\final-project-kiranmanoj2000\\Assignment-6-4U\\src\\Images\\IMG_0050.JPG")); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(27, 27, 27))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addComponent(jButton1)
-                .addContainerGap(93, Short.MAX_VALUE))
-        );
+        IMAGE.setLayout(null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,22 +80,22 @@ public class Interface extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(turnLeft)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(moveForward)
-                .addGap(99, 99, 99)
+                .addGap(202, 202, 202)
                 .addComponent(turnRight)
                 .addGap(79, 79, 79))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(120, 120, 120))
+                .addContainerGap(95, Short.MAX_VALUE)
+                .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 741, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addContainerGap()
+                .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(turnLeft)
                     .addComponent(moveForward)
@@ -143,21 +113,13 @@ public class Interface extends javax.swing.JFrame {
 
     private void turnRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnRightActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_turnRightActionPerformed
 
     private void moveForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveForwardActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_moveForwardActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jPanel1.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    public void setImage(BufferedImage img) {
-        // need to add a get image method to ImageObject, or something else (adding method to imageObject is probably easiest)
-        //image.loadImage(img);
-    }
 
     /**
      * @param args the command line arguments
@@ -194,9 +156,7 @@ public class Interface extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private org.netbeans.modules.form.InvalidComponent IMAGE;
     private javax.swing.JButton moveForward;
     private javax.swing.JButton turnLeft;
     private javax.swing.JButton turnRight;

@@ -91,6 +91,8 @@ public class ImageObject {
         return isFrontBlocked;
     }
     
+    
+    
     //public BufferedImage getImage(String imageName){
         
         

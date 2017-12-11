@@ -42,6 +42,7 @@ public class AdventureMain {
         //this.currentImage = images.get(initialLocationPositionWithinArray);
         // NEED TO SET INITIAL IMAGE HERE
         //gui.setImage(images.get(initialLocationPositionWithinArray).getImageName());
+        gui.setImage(ImageObject.loadImage(currentImage.getImageName()));
 
     }
 
@@ -57,7 +58,7 @@ public class AdventureMain {
             // move to that imageObject
             this.currentImage = images.get(i);
             // UPDATE THE GUI WORK ON THIS!!!!!!!!!!!!
-            
+
         }
     }
 
