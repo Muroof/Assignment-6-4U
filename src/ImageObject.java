@@ -1,3 +1,8 @@
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -29,6 +34,21 @@ public class ImageObject {
         this.direction = direction;
         this.location = location;
 
+    }
+    
+    
+    
+    
+    
+    public static BufferedImage loadImage(String imageName) {
+        BufferedImage image = null;
+        try {
+            image = ImageIO.read(new File("images//" + imageName));
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return image;
     }
 
     public void setImageName(String imageName) {
@@ -71,6 +91,10 @@ public class ImageObject {
         return isFrontBlocked;
     }
     
+    //public BufferedImage getImage(String imageName){
+        
+        
+    //}
     public String toString() {
         String format = this.location + "\n";
 

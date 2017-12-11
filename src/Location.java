@@ -18,6 +18,10 @@ public class Location {
         this.locationName = locationName;
 
     }
+    
+    public String getLocationName(){
+        return this.locationName;
+    }
 
     public void setNImg(ImageObject NImg) {
         this.NImg = NImg;
