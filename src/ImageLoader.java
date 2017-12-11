@@ -35,7 +35,7 @@ public class ImageLoader extends JComponent {
     @Override
     public void paintComponent(Graphics g) {
         if (image != null) {
-            g.drawImage(image, 0, 0, this.getWidth(), this.getHeight(), null);
+            g.drawImage(image, 0, 0, image.getWidth(), image.getHeight(), null);
         }
     }
 
@@ -44,6 +44,7 @@ public class ImageLoader extends JComponent {
      * @param img set the image that is received
      */
     public void setImage(BufferedImage img) {
+        System.out.println(this.getWidth());
         // store the image
         this.image = img;
         // repaint to draw

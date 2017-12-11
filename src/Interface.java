@@ -20,9 +20,10 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         initComponents();
     }
-    
+
     public void setImage(BufferedImage img) {
         IMAGE.setImage(img);
+        repaint();
     }
 
     /**
@@ -30,7 +31,6 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface(AdventureMain game) {
         initComponents();
-        IMAGE.setVisible(false);
         this.game = game;
     }
 
@@ -46,7 +46,7 @@ public class Interface extends javax.swing.JFrame {
         turnLeft = new javax.swing.JButton();
         turnRight = new javax.swing.JButton();
         moveForward = new javax.swing.JButton();
-        IMAGE = new org.netbeans.modules.form.InvalidComponent();
+        IMAGE = new ImageLoader();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,31 +71,28 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        IMAGE.setLayout(null);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addComponent(turnLeft)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(moveForward)
-                .addGap(202, 202, 202)
-                .addComponent(turnRight)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(IMAGE, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(turnLeft)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
+                        .addComponent(moveForward)
+                        .addGap(202, 202, 202)
+                        .addComponent(turnRight)))
                 .addGap(79, 79, 79))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(95, Short.MAX_VALUE)
-                .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 741, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGap(55, 55, 55)
+                .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(turnLeft)
                     .addComponent(moveForward)
@@ -107,19 +104,20 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void turnLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnLeftActionPerformed
-
+        game.moveLeft();
 
     }//GEN-LAST:event_turnLeftActionPerformed
 
     private void turnRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnRightActionPerformed
-        // TODO add your handling code here:
+
+        game.moveRight();
 
     }//GEN-LAST:event_turnRightActionPerformed
 
     private void moveForwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveForwardActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_moveForwardActionPerformed
 
+        game.moveForward();
+    }//GEN-LAST:event_moveForwardActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,10 +154,9 @@ public class Interface extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.netbeans.modules.form.InvalidComponent IMAGE;
+    private ImageLoader IMAGE;
     private javax.swing.JButton moveForward;
     private javax.swing.JButton turnLeft;
     private javax.swing.JButton turnRight;
     // End of variables declaration//GEN-END:variables
-
 }
