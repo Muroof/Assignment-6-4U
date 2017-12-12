@@ -228,7 +228,6 @@ public class AdventureMain {
         // if the imageObject is facing north
         if (this.currentImage.getDirection().equals("N")) {
             // set the current imageObject to be the imageObject facing west within the same location
-
             this.currentImage = locations.get(i).getImg("W");
             // update the gui by displaying the new image
             gui.setImage(this.currentImage.loadImage(currentImage.getImageName()));
