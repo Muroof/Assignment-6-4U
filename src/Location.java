@@ -5,13 +5,12 @@
  */
 
 /**
- *
+ * @author Kiran
  * @author Maloof
  */
 public class Location {
 
     // create instances variables for the four imageObjects found within a location (N, E, S, and W imageObjects)
-
     private ImageObject NImg, EImg, SImg, WImg;
     // create an instance variable to store the name of a location
     private String locationName;

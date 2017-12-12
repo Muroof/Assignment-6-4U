@@ -56,66 +56,68 @@ public class Interface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        turnLeft.setForeground(new java.awt.Color(65, 60, 94));
         turnLeft.setText("Turn Left");
+        turnLeft.setBorderPainted(false);
         turnLeft.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 turnLeftActionPerformed(evt);
             }
         });
 
+        turnRight.setForeground(new java.awt.Color(65, 60, 94));
         turnRight.setText("Turn Right");
+        turnRight.setBorderPainted(false);
         turnRight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 turnRightActionPerformed(evt);
             }
         });
 
+        moveForward.setForeground(new java.awt.Color(65, 60, 94));
         moveForward.setText("Move Forward");
+        moveForward.setBorderPainted(false);
         moveForward.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 moveForwardActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Palatino Linotype", 3, 48)); // NOI18N
-        jLabel1.setText("HHSS Adventure");
+        jLabel1.setFont(new java.awt.Font("Lemonade Stand", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(84, 79, 110));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("HHSS AdventurE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(256, 256, 256)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(114, Short.MAX_VALUE)
+                .addGap(320, 320, 320)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(turnLeft)
+                        .addComponent(turnRight)
                         .addGap(190, 190, 190)
                         .addComponent(moveForward)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(turnRight)
-                        .addGap(112, 112, 112))))
+                        .addComponent(turnLeft))
+                    .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(331, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(50, 50, 50)
-                .addComponent(IMAGE, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(34, 34, 34)
+                .addComponent(IMAGE, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(turnLeft)
                     .addComponent(moveForward)
+                    .addComponent(turnLeft)
                     .addComponent(turnRight))
-                .addContainerGap())
+                .addGap(70, 70, 70))
         );
 
         pack();
