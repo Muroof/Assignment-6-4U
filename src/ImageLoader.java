@@ -19,7 +19,7 @@ import javax.swing.JComponent;
  */
 public class ImageLoader extends JComponent {
 
-    // instance variable
+    // instance variable for the buffered image
     private BufferedImage image;
 
     // constructor
@@ -44,7 +44,7 @@ public class ImageLoader extends JComponent {
      * @param img set the image that is received
      */
     public void setImage(BufferedImage img) {
-        System.out.println(this.getWidth());
+
         // store the image
         this.image = img;
         // repaint to draw
