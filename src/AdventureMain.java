@@ -146,7 +146,7 @@ public class AdventureMain {
         gui = new Interface(this);
         gui.setVisible(true);
         // create a purple color
-        Color background = new Color(234, 222, 218);
+        Color background = new Color (127, 40, 214);
         // set the purple color to be the background of the gui
         gui.getContentPane().setBackground(background);
         // set the image on the screen to be the starting imageObject
