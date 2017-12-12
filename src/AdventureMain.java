@@ -39,7 +39,7 @@ public class AdventureMain {
     private ImageObject currentImage;
 
     /**
-     * constructor for the Adventure Main
+     * constructor for the Adventure Main, initializes the gui and scans in the text file and plays the music
      */
     public AdventureMain() {
 
