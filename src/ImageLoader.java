@@ -16,6 +16,7 @@ import javax.swing.JComponent;
 /**
  *
  * @author Kiran
+ * @author Maloof
  */
 public class ImageLoader extends JComponent {
 

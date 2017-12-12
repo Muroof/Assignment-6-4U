@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
  * and open the template in the editor.
  */
 /**
- *
+ * @author Kiran
  * @author Maloof
  */
 public class ImageObject {
